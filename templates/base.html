@@ -87,7 +87,7 @@
   <footer id="contentinfo">
     <div id="blogroll" class="w3-row">
         <div class="blogroll-block w3-col l3 m3 s6">
-			  {# <div>
+			   <div>
                 <h6>{{ _('Categories') }}</h6>
                 <ul>
                     {% for category, articles in categories %}
@@ -97,7 +97,7 @@
                     <li class="empty"></li>
                     {% endfor %}
                 </ul>
-			  </div>  #}
+			  </div>
         </div>
     <div class="blogroll-block w3-col l3 m3 s6">
       <div>
@@ -113,7 +113,8 @@
         </ul>
       </div>
     </div>
-    <div class="blogroll-block w3-col l3 m3 s6">
+	 {# I don't need the list of authors since this is for a personal site with only one author #}
+	 {#    <div class="blogroll-block w3-col l3 m3 s6">
       <div>
           <h6><a href="{{ SITEURL }}/authors.html">{{ _('Authors') }}</a></h6>
           <ul>
@@ -128,7 +129,7 @@
               {% endfor %}
           </ul>
       </div>
-    </div>
+	 </div>#}
       <div class="blogroll-block w3-col l3 m3 s6">
           <div>
               <h6>Social Media</h6>
