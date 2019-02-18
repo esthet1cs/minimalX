@@ -48,22 +48,25 @@
     <script src="{{ SITEURL }}/theme/js/jqcloud.min.js"></script>
 
      <!-- Meta -->
+	 <meta name="robots" content="noindex, nofollow" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="HandheldFriendly" content="True" />
+	 <meta name="keywords" content="claus-michael schlesinger, claus-michael, schlesinger, homepage, elektronische literatur, textronica">
+	 <meta name="author" content="claus-michael schlesinger">
     {% endblock head %}
 </head>
 <body>
   <div class="w3-row w3-card w3-white">
     <header id=banner>
        <!-- AUTHOR INITIALS-->
-      <a href="{{ SITEURL }}" id=logo title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>
+		 {#      <a href="{{ SITEURL }}" id=logo title="Home">{{ AUTHOR[0] + AUTHOR[AUTHOR.index(" ")+1] }}</a>#}
       <nav id="menu">
         <ul>
           {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
-          <li{% if p==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+          <li{% if p==page %} class="selected" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% endfor %}
           {% endif %}
           {% if DISPLAY_CATEGORIES_ON_MENU %}
@@ -85,8 +88,10 @@
 {% block content %}
 {% endblock %}
   <footer id="contentinfo">
-    <div id="blogroll" class="w3-row">
-        <div class="blogroll-block w3-col l3 m3 s6">
+	  {# I don't use categories, so no need to show them here #}
+	  <div id="blogroll" class="w3-row">
+		  {#
+		  <div class="blogroll-block w3-col l3 m3 s6">
 			   <div>
                 <h6>{{ _('Categories') }}</h6>
                 <ul>
@@ -98,7 +103,8 @@
                     {% endfor %}
                 </ul>
 			  </div>
-        </div>
+		  </div>
+		  #}
     <div class="blogroll-block w3-col l3 m3 s6">
       <div>
         <h6>Top Tags</h6>
@@ -148,10 +154,6 @@
         <ul>
             <li><a href="{{ SITEURL }}/pages/kontakt.html">{{ _('Kontakt | Impressum') }}</a></li>
         </ul>
-    </div>
-    <div id="copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>Powered by <a href="http://getpelican.com" target="_blank"><u>Pelican</u></a> and <a href="https://github.com/esthet1cs/minimalX" target="_blank"><u>minimalXtra</u></a>{% if FEED_ALL_RSS %} | <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">RSS <i class="fa fa-rss" aria-hidden="true"></i></a>{% endif %}
-        </span>
     </div>
   </footer>
 {% if GOOGLE_ANALYTICS %}
