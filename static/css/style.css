@@ -78,7 +78,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  font-weight: bold;
+   background-color: hsl(240,0%,90%);
 }
 
 img.avatar {
@@ -115,21 +115,27 @@ ul.social li a:hover {
 article {
   font-size: 13.5pt;
   padding-top: 0!important;
+  text-align: justify;
 }
 
 main {
   line-height: 1.7;
 }
 
-main > p:first-of-type::first-letter {
+/* main > p:first-of-type::first-letter {
   font-size: 36pt;
   font-weight: bold;
   font-family: serif;
   line-height: 1;
-}
+} */
 
 main a {
-  color: #f44336;
+  text-decoration: underline;
+  background-color: hsl(240,0%,96%);
+}
+
+main a:hover {
+   background-color: hsl(240,0%,90%);
 }
 
 main blockquote {
@@ -360,7 +366,12 @@ div#contact ul li {
   }
 
   article {
-    font-size: 15pt;
+    font-size: 12pt;
+  }
+
+  h1, h2, h3, h4, h5 {
+	  margin-top: 1.6em;
+	  font-weight: normal;
   }
 
   h1 {
