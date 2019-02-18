@@ -123,7 +123,7 @@ article {
 }
 
 main {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* main > p:first-of-type::first-letter {
@@ -142,7 +142,7 @@ main a:hover {
 }
 
 main blockquote {
-  border-left: 4px solid;
+  border-left: 2px solid;
   border-color: black;
   padding-left: 16px;
   margin: 20px;
@@ -365,7 +365,7 @@ div#contact ul li {
 
   nav ul {
     flex-direction: row;
-    margin-top: 32px;
+    margin-top: 15px;
   }
 
   article {
@@ -388,7 +388,7 @@ div#contact ul li {
   }
 
   main blockquote {
-    border-left: 6px solid;
+    border-left: 2px solid;
     margin: 20px 40px;
   }
 
