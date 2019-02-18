@@ -22,9 +22,10 @@
   {% endblock %}    
 {% endblock %}
 {% block content_title %}
+{# using this theme for a site, so no introduction on the blogs starting page necessary.. #}
 {% if articles_page.number == 1 %}
 {% include 'introduction.html' %}
-{% endif %}
+{% endif %} 
 {% endblock %}
 {% block content %}
 <br>
